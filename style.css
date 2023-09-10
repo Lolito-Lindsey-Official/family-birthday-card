@@ -1,64 +1,42 @@
-.profile-card {
-    width: 300px;
-    border: 1px solid #ccc;
-    padding: 15px;
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
     text-align: center;
 }
 
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    background-color: #eee;
-    margin: 0 auto;
+header, main, footer {
+    margin-bottom: 20px;
 }
 
-.profile-info h2 {
-    font-size: 24px;
+h1 {
+    font-size: 2em;
     margin: 10px 0;
 }
 
-.face {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    margin: 20px auto;
+img {
+    max-width: 100%;
+    height: auto;
 }
 
-.eye {
-    width: 15px;
-    height: 15px;
-    background-color: black;
-    position: absolute;
-    top: 20px;
+/* Infinite Gradient Background */
+body {
+    background: linear-gradient(90deg, skyblue, grassgreen, skyblue);
+    background-size: 300% 300%;
+    animation: gradient-animation 10s infinite;
 }
 
-.left-eye {
-    left: 20px;
-}
-
-.right-eye {
-    right: 20px;
-}
-
-.mouth {
-    width: 40px;
-    height: 20px;
-    background-color: red;
-    position: absolute;
-    bottom: 20px;
-    left: 30px;
-    border-radius: 50%;
-}
-
-@keyframes smile-to-neutral {
-    0% {
-        border-radius: 50%;
-    }
-    100% {
-        border-radius: 0;
-    }
-}
-
-.mouth {
-    animation: smile-to-neutral 2s ease infinite alternate;
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
